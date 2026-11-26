@@ -1,0 +1,30 @@
+name: publish
+
+# 用 npm Trusted Publishing（OIDC）发布：不需要任何长期 token，
+# 也就不存在过期/续期。首次发布前在 npm 包设置里把本仓库加为 trusted publisher：
+# https://www.npmjs.com/package/cloud189-mcp/access
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Upgrade npm (OIDC trusted publishing needs >= 11.5)
+        run: npm install -g npm@latest
+      - name: Test
+        run: npm test
+      - name: Publish
+        run: npm publish --access public
