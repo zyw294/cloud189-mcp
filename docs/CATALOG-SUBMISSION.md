@@ -1,6 +1,6 @@
 # 收录对齐与提交流程（dsh-plugin-catalog / awesome-dsh-plugin）
 
-本轮只做开发与本地验证，**未发布、未提交**。下面是把两个包送进 DSH 插件市场/社区目录所需的硬条件与步骤，依据是 2026-11-26 查到的公开说明。
+**2026-11-27 更新：包已发布（`cloud189-mcp@0.2.6`），公开仓库已建 https://github.com/zyw294/cloud189-mcp（`dsh-plugin` 等 6 个 topic 已打），`repository`/`homepage`/`bugs` 已写入 `package.json`。剩余：向各市场提交条目。** 下面是把包送进 DSH 插件市场/社区目录所需的硬条件与步骤。
 
 ## 一、收录的硬条件（各市场基本一致）
 
@@ -9,9 +9,9 @@
 | `package.json` 里有 `dsh-plugin` keyword | DSH 插件（`plugin/`） | ✅ 已有 |
 | `package.json` 里有 `dsh.bundle` 字段，指向 `cordis.patch.yml` | DSH 插件 | ✅ 已有（`./cordis.patch.yml`） |
 | 开源 License | 两个包 | ✅ MIT（`LICENSE`） |
-| 公开 GitHub 仓库 + `repository` 字段 | 两个包 | ❌ 缺（尚未建仓） |
-| 已发布到 npm | 两个包 | ❌ 未发布（等你确认包名与账号） |
-| 仓库打 `dsh-plugin` GitHub topic | DSH 插件 | ❌ 待建仓后加 |
+| 公开 GitHub 仓库 + `repository` 字段 | 两个包 | ✅ https://github.com/zyw294/cloud189-mcp |
+| 已发布到 npm | 两个包 | ✅ `cloud189-mcp@0.2.6`（账号 zyw294） |
+| 仓库打 `dsh-plugin` GitHub topic | DSH 插件 | ✅ 已打（mcp / dsh-plugin / cloud189 / tianyi-cloud / cloud-drive / model-context-protocol） |
 
 来源：DSH Plugin Shop 的收录说明（“把 `dsh-plugin` 加进 keywords、package.json 里要有 `dsh.bundle`、再加 license 与 source repository，然后 publish 到 npm，每日构建才能发现”）— https://dedupedai.com/use-cases/livxue-dsh-plugin-shop/list-plugin-in-catalog （2026-10-20）；dshmarketplace.dev 提交页（“给仓库打 topic，下一轮同步就会发现”）— https://dshmarketplace.dev/zh/submit 。
 
