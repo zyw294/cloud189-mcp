@@ -1,6 +1,6 @@
 {
   "name": "cloud189-mcp",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "天翼云盘（cloud.189.cn）MCP 服务器 + DSH 插件：列目录、搜索、下载直链、上传、建目录、删除（含回收站恢复）、查配额。dual-channel（PC 签名 + 网页 cookie），零运行时依赖。",
   "keywords": [
     "mcp",
@@ -16,6 +16,14 @@
   ],
   "license": "MIT",
   "author": "zongyawei",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyw294/cloud189-mcp.git"
+  },
+  "homepage": "https://github.com/zyw294/cloud189-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/zyw294/cloud189-mcp/issues"
+  },
   "type": "module",
   "main": "lib/index.js",
   "exports": {
