@@ -1,0 +1,16 @@
+# cloud189-mcp — 同一个 npm 包里同时带 MCP server 与 DSH 插件。
+#
+# 默认不需要任何配置：插件用当前 Node 进程跑包内的 src/index.js，
+# 会话文件走 CLOUD189_SESSION_PATH（或 ~/.cloud189/session.json）。
+# 需要覆盖时（例如直接指到 cloud189-sync 的缓存）：
+#
+#   - id: cloud189-mcp
+#     config:
+#       sessionPath: 'F:/Ai/Deepseek/sync/.c189_session.json'
+#       # command: node
+#       # args: ['F:/Ai/Deepseek/_cloud189-mcp/src/index.js']
+#
+- insert:
+    - id: cloud189-mcp
+      name: cloud189-mcp
+      config: {}

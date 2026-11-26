@@ -1,0 +1,55 @@
+{
+  "name": "cloud189-mcp",
+  "version": "0.2.5",
+  "description": "天翼云盘（cloud.189.cn）MCP 服务器 + DSH 插件：列目录、搜索、下载直链、上传、建目录、删除（含回收站恢复）、查配额。dual-channel（PC 签名 + 网页 cookie），零运行时依赖。",
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "cloud189",
+    "cloud-189",
+    "天翼云盘",
+    "189",
+    "china-telecom",
+    "cloud-drive",
+    "stdio",
+    "dsh-plugin"
+  ],
+  "license": "MIT",
+  "author": "zongyawei",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "cloud189-mcp": "src/index.js"
+  },
+  "files": [
+    "src",
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/protocol.test.mjs",
+    "test:e2e": "node test/e2e.mjs",
+    "test:plugin": "node test/plugin-smoke.mjs",
+    "check": "node --check src/index.js && node --check src/protocol.js && node --check src/api.js && node --check src/tools.js && node --check src/session.js && node --check lib/index.js && node --check lib/mcp-client.js"
+  },
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
